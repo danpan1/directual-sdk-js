@@ -1,23 +1,21 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
+# See https://www.atlassian.com/git/tutorials/gitignore for examples.
+# see https://git-scm.com/docs/gitignore for manual.
 
-# dependencies
-/node_modules
+# Editor
+.idea/
 
-# testing
-/coverage
+# Dependencies
+node_modules/
 
-# production
-/build
+# Testing
+coverage/
 
-# misc
+# Production
+es/
+
+# Logs
+*.log
+
+# Misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-/.idea

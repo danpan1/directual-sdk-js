@@ -1,0 +1,28 @@
+{
+  "name": "directual",
+  "version": "0.1.0",
+  "description": "Directual SDK for JavaScript",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "babel src --out-dir es",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/directual/directual-sdk-js.git"
+  },
+  "keywords": [
+    "directual",
+    "sdk"
+  ],
+  "author": "Konstantin Melnikov <k.melnikov@directual.com> (https://github.com/archangel-irk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/directual/directual-sdk-js/issues"
+  },
+  "homepage": "https://github.com/directual/directual-sdk-js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0"
+  }
+}
