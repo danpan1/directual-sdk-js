@@ -1,16 +1,18 @@
-const ResponseStatus = {
+// todo: move to separate file.
+export const ResponseStatus = {
   OK: 'OK',
   ERROR: 'ERROR',
 };
 
 
 /**
+ * todo: move to separate file.
  * HTTP Status Codes defined in RFC 2616 and RFC 6585.
  * @see http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
  * @see http://tools.ietf.org/html/rfc6585
  * @enum {number}
  */
-const HttpStatus = {
+export const HttpStatus = {
   // Informational 1xx
   CONTINUE: 100,
   SWITCHING_PROTOCOLS: 101,
@@ -102,12 +104,13 @@ HttpStatus.isSuccess = function isSuccess(status) {
 
 
 /**
+ * todo: move to separate file.
  * HTTP Status Code Names defined in RFC 2616 and RFC 6585.
  * @see http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
  * @see http://tools.ietf.org/html/rfc6585
  * @type {!Object<number, string>}
  */
-const HttpStatusName = {
+export const HttpStatusName = {
   // Informational 1xx
   100: 'Continue',
   101: 'Switching Protocols',
@@ -164,28 +167,14 @@ const HttpStatusName = {
 };
 
 /**
+ * todo: move to separate file.
  * State of the requests.
  * @enum {number}
  */
-const RequestState = {
+export const RequestState = {
   UNSENT: 0,
   OPENED: 1,
   HEADER_RECEIVED: 2,
   LOADING: 3,
   DONE: 4,
-};
-
-
-export {
-  ResponseStatus,
-  HttpStatus,
-  HttpStatusName,
-  RequestState,
-};
-
-export default {
-  ResponseStatus,
-  HttpStatus,
-  HttpStatusName,
-  RequestState,
 };

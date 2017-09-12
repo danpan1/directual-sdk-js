@@ -1,4 +1,4 @@
-function checkStatus(response) {
+export function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
@@ -7,12 +7,6 @@ function checkStatus(response) {
   throw error;
 }
 
-function parseJSON(response) {
+export function parseJSON(response) {
   return response.json();
 }
-
-
-export {
-  checkStatus,
-  parseJSON,
-};

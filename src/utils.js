@@ -86,4 +86,13 @@ const utils = {
   },
 };
 
+/**
+ * Extract data from axios response.
+ * @param {AxiosResponse} response
+ * @return {*}
+ */
+export function extractResponseData(response) {
+  return response.data;
+}
+
 export default utils;
