@@ -5,9 +5,6 @@ import utils from './utils';
 
 
 const directual = {
-  /**
-   * @type {ApiClient}
-   */
   api,
   events,
   net,

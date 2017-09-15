@@ -142,32 +142,62 @@ class Structure extends Endpoint {
   }
 }
 
+const api = {
+  /**
+   *
+   * @type {function():CancelTokenSource}
+   */
+  createCancelToken: axios.CancelToken.source,
 
-class ApiClient {
+  /**
+   * @type {function(*):boolean}
+   */
+  isCancel: axios.isCancel,
+
   /**
    *
    * @type {AxiosRequestConfig}
    */
-  defaults = axiosInstance.defaults;
+  defaults: axiosInstance.defaults,
 
   /**
    * Create structure bound endpoint.
-   * todo: remove eslint-disable-next-line
    * @param {string} name
    * @return {Structure}
    */
-  // eslint-disable-next-line class-methods-use-this
   structure(name) {
     return new Structure(name);
-  }
+  },
+
+  /**
+   * Upload a file.
+   * @param {File} file
+   * @param {Object} options
+   * @param {CancelToken} options.cancelToken
+   * @return {Promise}
+   */
+  fileUpload(file, options = {}) {
+    const data = new FormData();
+    data.append('file', file);
+
+    return axiosInstance
+      .request({
+        method: 'POST',
+        url: 'file/upload',
+        params: {
+          source: 'others',
+        },
+        data,
+        cancelToken: options.cancelToken,
+      })
+      .then(extractResponseData);
+  },
 
   /**
    * Apply OR operator from api.
-   * todo: remove eslint-disable-next-line
    * @param {Array} filters
    * @return {[*]}
    */
-  // eslint-disable-next-line class-methods-use-this
   decorateWithOrOperator(filters) {
     return [{
       value: '',
@@ -176,8 +206,8 @@ class ApiClient {
       operator: 'OR',
       filters,
     }];
-  }
-}
+  },
+};
 
 
-export default new ApiClient();
+export default api;
