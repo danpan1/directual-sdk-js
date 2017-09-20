@@ -8,7 +8,9 @@
     "es"
   ],
   "scripts": {
+    "clean": "rimraf es",
     "build": "babel src --out-dir es",
+    "prepare": "npm run clean && npm run build",
     "test": "jest"
   },
   "repository": {
@@ -27,7 +29,8 @@
   "homepage": "https://github.com/directual/directual-sdk-js#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0"
+    "babel-preset-env": "^1.6.0",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "axios": "^0.16.2",
