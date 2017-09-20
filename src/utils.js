@@ -1,7 +1,5 @@
-import {
-  isEmpty,
-  get,
-} from 'lodash';
+import isEmpty from 'lodash/isEmpty';
+import get from 'lodash/get';
 
 
 const utils = {
