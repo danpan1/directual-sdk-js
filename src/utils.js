@@ -93,4 +93,15 @@ export function extractResponseData(response) {
   return response.data;
 }
 
+
+/**
+ * Convert string to array.
+ * @param {string} string
+ * @return {Array}
+ */
+export function stringToArray(string) {
+  if (string.length === 0) return [];
+  return string.split(',');
+}
+
 export default utils;
