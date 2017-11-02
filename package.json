@@ -1,6 +1,6 @@
 {
   "name": "directual",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Directual SDK for JavaScript",
   "main": "es/index.js",
   "module": "es/index.js",
