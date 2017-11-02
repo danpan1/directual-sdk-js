@@ -57,6 +57,21 @@ class Endpoint {
   }
 
   /**
+   * FromIndex - search in indexed db. (options and all same as in Search)
+   * @param {Object} options Search options.
+   * @return {Promise}
+   */
+  fromIndex(options) {
+    return axiosInstance
+      .request({
+        method: 'POST',
+        url: `struct/${this.name}/fromIndex`,
+        data: options,
+      })
+      .then(extractResponseData);
+  }
+
+  /**
    * Save (create/update) data.
    * @param {Object} data
    * @return {Promise}
