@@ -170,7 +170,8 @@ const api = {
   isCancel: axios.isCancel,
 
   /**
-   *
+   * @see https://github.com/axios/axios#config-defaults
+   * @see https://github.com/axios/axios#request-config
    * @type {AxiosRequestConfig}
    */
   defaults: axiosInstance.defaults,
