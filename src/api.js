@@ -43,30 +43,36 @@ class Endpoint {
 
   /**
    * Search.
-   * @param {Object} options Search options.
+   * @param {Object} data Search options.
+   * @param {Object} options
+   * @param {CancelToken} options.cancelToken
    * @return {Promise}
    */
-  search(options) {
+  search(data, options = {}) {
     return axiosInstance
       .request({
         method: 'POST',
         url: `struct/${this.name}/search`,
-        data: options,
+        cancelToken: options.cancelToken,
+        data,
       })
       .then(extractResponseData);
   }
 
   /**
    * FromIndex - search in indexed db. (options and all same as in Search)
-   * @param {Object} options Search options.
+   * @param {Object} data Search options.
+   * @param {Object} options
+   * @param {CancelToken} options.cancelToken
    * @return {Promise}
    */
-  fromIndex(options) {
+  fromIndex(data, options = {}) {
     return axiosInstance
       .request({
         method: 'POST',
         url: `struct/${this.name}/fromIndex`,
-        data: options,
+        cancelToken: options.cancelToken,
+        data,
       })
       .then(extractResponseData);
   }
