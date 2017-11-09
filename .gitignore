@@ -13,6 +13,7 @@ coverage/
 
 # Production
 es/
+lib/
 
 # Logs
 *.log

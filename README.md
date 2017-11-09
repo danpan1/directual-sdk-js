@@ -1,6 +1,7 @@
 # directual-sdk-js
 Directual SDK for JavaScript https://directual.com/
 
-## Browser Support
+## Support
 * Explorer 11
-* Chrome >= 43
+* Chrome 43+
+* Node 8.9+

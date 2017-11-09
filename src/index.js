@@ -4,11 +4,17 @@ import net from './net';
 import utils from './utils';
 
 
-const directual = {
+// For CommonJS exports (for Node)
+export {
   api,
   events,
   net,
   utils,
 };
 
-export default directual;
+export default {
+  api,
+  events,
+  net,
+  utils,
+};
