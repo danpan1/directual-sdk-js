@@ -9,7 +9,7 @@ Directual SDK for JavaScript https://directual.com/
 ## Install
 npm install directual
 
-## Usage
+## Usage in Node
 ```js
 const directual = require('directual');
 
