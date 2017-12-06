@@ -7,7 +7,7 @@ Directual SDK for JavaScript https://directual.com/
 * Node 8.9+
 
 ## Install
-npm install directual
+`npm install directual`
 
 ## Usage in Node
 ```js
