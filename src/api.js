@@ -152,7 +152,7 @@ class Endpoint {
 /**
  * @extends {Endpoint}
  */
-class Structure extends Endpoint {
+export class Structure extends Endpoint {
   constructor(name) {
     super();
 
